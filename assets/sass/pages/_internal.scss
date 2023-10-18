@@ -1,0 +1,87 @@
+/***
+* PAGINATION
+***/
+
+.display-posts-pagination {
+	margin-bottom: 8em;
+	@include breakpoint(lt-break-mid){
+		margin-bottom: 3em;
+	}
+
+	.nav-links {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}
+
+.page-numbers {
+
+	cursor: pointer;
+	color: $navy;
+	background-color: transparent;
+padding: 10px 20px;
+margin-right: 5px ;
+text-decoration: none;
+font-family: $bodyfont;
+font-weight: 700;
+
+&.next, &.prev{
+	color: #72757a;
+	text-transform: uppercase;
+	font-size: .9em;
+	font-weight: 700;
+}
+&.prev {
+	&:before{
+		font-family: FontAwesome;
+		font-display: swap;
+		content: '\f060';
+		font-size: .8em;
+		font-weight: 100;
+		margin-right: 10px;
+	}
+}
+&.next {
+	&:after{
+		font-family: FontAwesome;
+		font-display: swap;
+		content: '\f061';
+		font-size: .8em;
+		font-weight: 100;
+		margin-left: 10px;
+	}
+}
+&.current{
+	background-color: $grey;
+	color: #72757a;
+
+}
+&:focus, &:hover{
+text-decoration: none;
+color: $aqua;
+// border: 1px solid $aqua;
+}
+}
+/***
+* EMBEDDED GALLERY
+***/
+
+.gallery {
+	overflow: hidden;
+}
+
+.gallery-item {
+	float: left;
+	margin-right: 2em;
+	margin-bottom: 2em;
+
+	a {
+		display: block;
+	}
+
+	img {
+		display: block;
+	}
+}

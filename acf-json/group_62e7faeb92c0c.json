@@ -1,0 +1,47 @@
+{
+    "key": "group_62e7faeb92c0c",
+    "title": "Post Intro",
+    "fields": [
+        {
+            "key": "field_62e7faf5c511b",
+            "label": "Post Intro",
+            "name": "post_intro",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "When creating a new blog\/news post upload an image and enter your post in the post intro content box. Formatting will not work if you use the paragraph.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "KS- Not Working if you enter image\/text into Paragraph.  This field is used in the posts for display of the blog entries",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "advanced",
+    "modified": 1686069929
+}

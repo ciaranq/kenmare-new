@@ -1,0 +1,162 @@
+{
+    "key": "group_5fc901f3de49d",
+    "title": "Crosslink Fields",
+    "fields": [
+        {
+            "key": "field_60dee7d200c3f",
+            "label": "Image",
+            "name": "crosslink_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image Recommended dimensions: 1400px x 350px",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60dee78300c3c",
+            "label": "Title",
+            "name": "crosslink_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Title text, displayed smaller than text on next line ,  use intro text like discover the unique taste etc",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_62d1198849f0b",
+            "label": "Text",
+            "name": "crosslink_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Text, displayed larger than text on previous line, use product text that you will breate the button for",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_62a71ff8e230e",
+            "label": "Button Text",
+            "name": "crosslink_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Text inside the button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_60dee7f300c41",
+            "label": "Links to",
+            "name": "crosslink_links_to",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "text field for the destination url relative to the TLD",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_62e3db53dceb7",
+            "label": "Background Options",
+            "name": "background_options",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Background 1 is white \r\nBackground 2 is pattern",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "Background1": "Background1",
+                "Background2": "Background2"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "Background1",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "nw_crosslink"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "KS- Content Panel (shop now, smokehouse etc)  that can be inserted onto a page as a content block. Post Type = crosllink",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "advanced",
+    "modified": 1686069906
+}

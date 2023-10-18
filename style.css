@@ -1,0 +1,29 @@
+/******************************************************************
+Theme Name: 2023 Custom Theme for Kenmare Select New
+Author:  Ciaran Quinlan / imrantraders07@gmail.com, Fiverr @imranwpdev
+Author URI: 
+Version: 1.01
+Description: Kenmare Select is a custom WordPress theme by Ciaran Quinlan.
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 5.8
+Requires PHP: 7.3
+Text Domain: kenmare_td
+Tags: custom-menu, full-width-template, Widgets, translation-ready
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*****************************************************
+ /* June 2023 the theme is being updated for use on multiple sites.
+  *  A number of phases will be undertaken to improve the theme. 
+  * Phase 1 will consis of the following activities
+  * Document and list css items that need to be changed in the event of a colour scheme change
+  * 1. Document the main parts/layout of the  theme 
+  * Identify any domain specific files in the css , php and js files , Unmminify the css etc
+  * Identify any domain specific text  in the css , php and js files 
+  * Identify custom directories used that will not migrate to another domain
+  * Identfy any custom code that would break if transferred to another site
+  * Document the ACF elements used in the theme
+  * 2. Fix any issues/errors with the acf and site
+  * Import two existing acf's  from Kerryfish.com site to create fish shop and seafood bar locations posts
+  * 3. Run speed tests and identify areas of improvement, Optimise the site and identify further speed improvements
+  * /

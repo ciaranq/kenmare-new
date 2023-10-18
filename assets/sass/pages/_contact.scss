@@ -1,0 +1,37 @@
+.panel-contact-map{
+	margin-bottom: 5em;
+}
+
+.panel-contact-form {
+	// @extend %layout-margin-left;
+	margin-top: 40px;
+
+	@include breakpoint(gt-break-big) { /* GT BP */
+		display:flex;
+		justify-content:space-between;
+		align-items:stretch;
+	}
+
+	@include breakpoint(lt-break-big) {
+		// margin-right:$margin-big;
+	}
+
+	@include breakpoint(lt-break-small) {
+		// margin-right:$margin-small;
+	}
+
+
+
+
+}
+
+
+.contact-panel-contact-form-block {
+	@include breakpoint(gt-break-biggest) { /* GT BP */
+		padding-left:$margin-biggest;
+	}
+
+	@include breakpoint(gt-break-big) { /* GT BP */
+		width:40%;
+	}
+}

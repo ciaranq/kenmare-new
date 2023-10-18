@@ -1,0 +1,48 @@
+.search-form-wrap {
+}
+
+.form-search {
+	position:relative;
+	overflow:hidden;
+	
+	button {
+		@include transition(all, 0.4s, 0s, ease-in-out);
+		
+		padding:0;
+		min-width:0;
+		margin:0 0 0 -3em;
+		position:relative;
+		top:0;
+		background:transparent !important;
+		
+		&:hover, &:focus, &:active {
+			background:transparent !important;
+			svg {
+				fill:$bblue;
+			}
+		}
+
+		svg {
+			@include transition(all, 0.4s, 0s, ease-in-out);
+			
+			fill:$gold;
+		}
+	}
+}
+
+.input-search {
+	width:25em;
+	max-width:75%;
+	margin-bottom:0;
+	padding-right:3em;
+}
+
+.search-result-item {
+	display:block;
+	text-decoration:none;
+	margin-bottom:2em;
+	
+	h5 {
+		margin-bottom:.7em;
+	}
+}

@@ -1,0 +1,256 @@
+$width-default: 100 - ($margin-default*2);
+$width-biggest: 100 - ($margin-biggest*2);
+$width-bigger: 100 - ($margin-bigger*2);
+$width-big: 100 - ($margin-big*2);
+
+
+%layout-margin-left {
+	margin-left:$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		margin-left:$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		margin-left:$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		margin-left:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		margin-left:$margin-small;
+	}
+}
+
+%layout-margin-right {
+	margin-right:$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		margin-right:$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		margin-right:$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		margin-right:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		margin-right:$margin-small;
+	}
+}
+
+%layout-margin {
+	@extend %layout-margin-left;
+	@extend %layout-margin-right;
+}
+
+%layout-padding-left {
+	padding-left:$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		padding-left:$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		padding-left:$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		padding-left:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		padding-left:$margin-small;
+	}
+}
+
+%layout-padding-right {
+	padding-right:$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		padding-right:$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		padding-right:$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		padding-right:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		padding-right:$margin-small;
+	}
+}
+
+%layout-padding {
+	@extend %layout-padding-left;
+	@extend %layout-padding-right;
+}
+
+
+%layout-margin-absolute {
+	position:absolute;
+	right:$margin-default;
+	left:$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		right:$margin-biggest;
+		left:$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		right:$margin-bigger;
+		left:$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		right:$margin-big;
+		left:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		right:$margin-small;
+		left:$margin-small;
+	}
+}
+
+%layout-width {
+	width:$width-default;
+	margin-left:auto;
+	margin-right:auto;
+
+	@include breakpoint(lt-break-biggest) {
+		width:$width-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		width:$width-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		width:$width-big;
+	}
+}
+
+/***
+* DOUBLE
+***/
+
+%layout-margin-left-double {
+	margin-left:2*$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		margin-left:2*$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		margin-left:2*$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		margin-left:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		margin-left:$margin-small;
+	}
+}
+
+%layout-margin-right-double {
+	margin-right:2*$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		margin-right:2*$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		margin-right:2*$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		margin-right:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		margin-right:$margin-small;
+	}
+}
+
+%layout-margin-double {
+	@extend %layout-margin-left-double;
+	@extend %layout-margin-right-double;
+}
+
+/* double padding */
+
+%layout-padding-left-double {
+	padding-left:2*$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		padding-left:2*$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		padding-left:2*$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		padding-left:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		padding-left:$margin-small;
+	}
+}
+
+%layout-padding-right-double {
+	padding-right:2*$margin-default;
+
+	@include breakpoint(lt-break-biggest) {
+		padding-right:2*$margin-biggest;
+	}
+	@include breakpoint(lt-break-bigger) {
+		padding-right:2*$margin-bigger;
+	}
+	@include breakpoint(lt-break-big) {
+		padding-right:$margin-big;
+	}
+	@include breakpoint(lt-break-small) {
+		padding-right:$margin-small;
+	}
+}
+
+%layout-padding-double {
+	@extend %layout-padding-left-double;
+	@extend %layout-padding-right-double;
+}
+
+/***
+* PADDING CONTENT
+***/
+
+%layout-padding-content-left {
+	padding-left:4em;
+
+	@include breakpoint(lt-break-bigger) {
+		padding-left:2em;
+	}
+
+	@include breakpoint(lt-break-big) {
+		padding-left:1em;
+	}
+
+	@include breakpoint(lt-break-mid) {
+		padding-left:0;
+	}
+}
+
+%layout-padding-content-right {
+	padding-right:4em;
+
+	@include breakpoint(lt-break-bigger) {
+		padding-right:2em;
+	}
+
+	@include breakpoint(lt-break-big) {
+		padding-right:1em;
+	}
+
+	@include breakpoint(lt-break-mid) {
+		padding-right:0;
+	}
+}
+
+%layout-padding-content {
+	@extend %layout-padding-content-left;
+	@extend %layout-padding-content-right;
+}
+
+.float-left{
+	float: left;
+}
+
+.float-right{
+	float: right;
+}

@@ -1,0 +1,102 @@
+/* media queries */
+
+@mixin breakpoint($point) {
+  
+	/* max width */
+	@if $point == lt-break-biggest {
+    @media (max-width: $break-biggest+px) { @content; }
+  }
+  @else if $point == lt-break-bigger {
+    @media (max-width: $break-bigger+px) { @content; }
+  }
+  @else if $point == lt-break-big {
+    @media (max-width: $break-big+px)  { @content; }
+  }
+  @else if $point == lt-break-mid {
+    @media (max-width: $break-mid+px)  { @content; }
+  }
+  @else if $point == lt-break-small {
+    @media (max-width: $break-small+px)  { @content; }
+  }
+  @else if $point == lt-break-smaller {
+    @media (max-width: $break-smaller+px)  { @content; }
+  }
+	
+	/* min width */
+  @else if $point == gt-break-biggest {
+    @media (min-width: $break-biggest-1+px) { @content; }
+  }
+  @else if $point == gt-break-bigger {
+    @media (min-width: $break-bigger-1+px) { @content; }
+  }
+  @else if $point == gt-break-big {
+    @media (min-width: $break-big-1+px)  { @content; }
+  }
+  @else if $point == gt-break-mid {
+    @media (min-width: $break-mid-1+px)  { @content; }
+  }
+  @else if $point == gt-break-small {
+    @media (min-width: $break-small-1+px)  { @content; }
+  }
+  @else if $point == gt-break-smaller {
+    @media (min-width: $break-smaller-1+px)  { @content; }
+  }
+	
+	/* max height */
+	@elseif $point == lt-break-tallest {
+    @media (max-height: $break-height-tallest+px) { @content; }
+  }
+  @else if $point == lt-break-taller {
+    @media (max-height: $break-height-taller+px) { @content; }
+  }
+  @else if $point == lt-break-tall {
+    @media (max-height: $break-height-tall+px) { @content; }
+  }
+	
+	/* min height */
+  @elseif $point == gt-break-tallest {
+    @media (min-height: $break-height-tallest+px) { @content; }
+  }
+  @else if $point == gt-break-taller {
+    @media (min-height: $break-height-taller+px) { @content; }
+  }
+  @else if $point == gt-break-tall {
+    @media (min-height: $break-height-tall+px) { @content; }
+  }
+}
+
+/* dev */
+body {	
+
+	border:0 solid #0ff; /* default - bigger than biggest - cyan */
+	
+	@include breakpoint(lt-break-biggest) { /* red */
+		border-color:#f00;
+	}
+	@include breakpoint(lt-break-bigger) { /* green */
+		border-color:#0f0;
+	}
+	@include breakpoint(lt-break-big) { /* blue */
+		border-color:#00f;
+	}
+	@include breakpoint(lt-break-mid) { /* pink */
+		border-color:#f0f;
+	}
+	@include breakpoint(lt-break-small) { /* yellow */
+		border-color:#ff0;
+	}
+	@include breakpoint(lt-break-smaller) { /* cyan */
+		border-color:#0ff;
+	}
+
+
+	@include breakpoint(lt-break-tallest) { /* yellow */
+		xborder-color:#f0f; 
+	}
+	@include breakpoint(lt-break-taller) { /* yellow */
+		xborder-color:#ff0; 
+	}
+	@include breakpoint(lt-break-tall) { /* red */
+		xborder-color:#f00;
+	}
+}

@@ -1,0 +1,292 @@
+/***
+HOME BANNER / CAROUSEL - COMMON
+***/
+
+.panel-banner {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	img {
+		position: relative;
+		display: block;
+		width: 100%;
+		max-width: none;
+		@include breakpoint(lt-break-mid) {
+			width: 140% !important;
+			margin-left: -20%;
+		}
+		@include breakpoint(lt-break-small) {
+			width: 180% !important;
+			margin-left: -40%;
+		}
+
+	}
+}
+
+.panel-banner--home {
+	border-bottom: 4px solid $aqua;
+}
+
+/***
+* HOME PAGE
+***/
+
+@keyframes imageZoom {
+	0% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+.banner-carousel {
+
+	/* cls */
+	> .item:not(:first-child) {
+		display: none;
+	}
+	position: relative;
+	// display: block;
+
+	.banner-carousel-item {
+
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			background: linear-gradient(to bottom,transparent 100%,rgba(0,0,0,.6)100%);
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+	}
+
+	.owl-item {
+		overflow: hidden;
+		-webkit-backface-visibility: visible;
+		-webkit-transform: translateZ(0) scale(1.0, 1.0);
+		// -moz-backface-visibility: hidden;
+	}
+
+
+	&.owl-carousel {
+
+		// position: relative;
+		// display: block;
+		.owl-item{
+			&.active{
+			img {
+				animation: 5s ease-out 0s 1 imageZoom;
+			}
+		.carousel-overlay {
+			@extend %movingDown;
+		}
+	}
+}
+
+
+		.owl-dots {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			top: 40%;
+			left: 90%;
+			transform: translate(0,0);
+			-webkit-transform: translate(0,0);
+
+			.owl-dot {
+				margin-bottom: 1em;
+				opacity: 0.6;
+
+				&.active {
+					background: $white;
+					opacity: 1;
+
+					span {
+						background: transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+element.style {
+}
+
+
+.banner-carousel-item {
+	position: relative;
+
+}
+
+.carousel-overlay {
+	// @extend %movingDown;
+
+	@include breakpoint(gt-break-bigger) {
+		/* GT BP */
+		margin-top: 1em;
+	}
+	color: #fff;
+	position: absolute;
+	left: 12%;
+	top: 15%;
+	width: 33em;
+	max-width: 90%;
+	text-align: left;
+	z-index: 3;
+	@include breakpoint(lt-break-big) {
+		margin-top: -.5em;
+		left: 5%;
+		top: 10%;
+	}
+
+	.btn {
+		z-index: 4;
+		cursor: pointer;
+		margin-right: 2em;
+	}
+}
+
+.carousel-overlay-title {
+	font-size: 3.2em;
+	color: #fff;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-weight: 700;
+	z-index: 2;
+	@include breakpoint(lt-break-big) {
+		font-size: 2.6em;
+		margin-bottom: 0.7em;
+	}
+	@include breakpoint(lt-break-mid) {
+		font-size: 2.0em;
+	}
+	@include breakpoint(lt-break-small) {
+		font-size: 1.8em;
+	}
+	@include breakpoint(lt-break-smaller) {
+		font-size: 1.6em;
+	}
+
+	.carousel-overlay-title-span {
+		display: block;
+		color: $white;
+		font-size: 0.6em;
+		margin-bottom: 0.5em;
+		@include breakpoint(lt-break-big) {
+			font-size: 0.5em;
+			margin-bottom: 0.3em;
+		}
+		@include breakpoint(lt-break-mid) {
+			font-size: 0.4em;
+			margin-bottom: 0.2em;
+		}
+	}
+}
+/***
+* INTERNAL PAGE
+***/
+
+.panel-banner-internal {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 2;
+		background: linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.6)100%);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.panel-banner-internal--background-1 {
+		border-bottom: 4px solid $aqua;
+}
+
+
+.banner-internal-overlay {
+	@extend %layout-padding;
+	position: absolute;
+	z-index: 3;
+
+}
+
+.banner-internal-overlay-title {
+	color: #fff;
+	margin-bottom: 0;
+	line-height: 110%;
+	font-size: 2.5em;
+	text-align: left;
+	padding: 0;
+	width:10em;
+	max-width:100%;
+
+	@include breakpoint(lt-break-big) {
+		font-size: 1.8em;
+	}
+
+	@include breakpoint(lt-break-small) {
+		font-size: 1.5em;
+	}
+}
+
+.banner-internal-blockquote {
+
+	position:relative; display: block;
+	background-color: $navy;
+	opacity: .8;
+	width: 50%;
+	padding: 8% 5%;
+	display: flex;
+	flex-direction: column;
+	@include breakpoint(lt-break-big){
+		width: 80%;
+	}
+	@include breakpoint(lt-break-mid){
+		width: 90%;
+			padding: 4% 5%;
+	}
+
+
+	&:after{
+		content: "";
+		background: url("../images/logo-overlay.png") no-repeat center right;
+		background-size: cover;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 300px;
+		height: 300px;
+
+	}
+	.banner-internal-overlay-quote{
+		margin-top: 2em;
+		color: $white;
+		font-style: italic;
+		@include breakpoint(lt-break-mid){
+				margin-top: 1em;
+				font-size: .9em;
+		}
+	}
+.banner-internal-overlay-author{
+			color: $white;
+			font-size: .7em;
+			@include breakpoint(lt-break-mid){
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+}
+}

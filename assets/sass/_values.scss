@@ -1,0 +1,42 @@
+/* colours */
+$aqua: #35869b;
+$gold: #d1ab6d;
+$navy:#22333a;
+$white: #fff;
+$bblue: #d6ebf0;
+$pink: #E85D63;
+$kgreen: #92947c;
+$green: #5d5e43;
+$grey: #f2f2f2;
+
+/* fonts */
+$bodyfont: 'Raleway', Arial, sans-serif;
+$headingfont: 'Playfair Display', Arial, sans-serif;
+
+/* breakpoints */
+$break-biggest: 1350; /* red */
+$break-bigger: 1140; /* green */
+$break-big: 930; /* blue */
+$break-mid: 620; /* pink */
+$break-small: 450; /* yellow */
+$break-smaller: 380; /* cyan */
+
+/* gt breakpoints */
+$break-biggest-1: $break-biggest + 1; /* red */
+$break-bigger-1: $break-bigger + 1; /* green */
+$break-big-1: $break-big + 1; /* blue */
+$break-mid-1: $break-mid + 1; /* pink */
+$break-small-1: $break-small + 1; /* yellow */
+$break-smaller-1: $break-smaller + 1; /* cyan */
+
+/* height breakpoints */
+$break-height-tallest: 670;
+$break-height-taller: 550;
+$break-height-tall: 470;
+
+/* margins */
+$margin-default: 12%;
+$margin-biggest: 10%;
+$margin-bigger: 8%;
+$margin-big: 6%;
+$margin-small: 15px;

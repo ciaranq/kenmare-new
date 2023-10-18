@@ -1,0 +1,129 @@
+@mixin transition($what: all, $time: 0.2s, $delay: 0s, $transition: ease-in-out) {
+	-webkit-transition: $what $time $delay $transition;
+	-moz-transition:    $what $time $delay $transition;
+	-ms-transition:     $what $time $delay $transition;
+	-o-transition:      $what $time $delay $transition;
+	transition:         $what $time $delay $transition;
+}
+
+@mixin linear-gradient($start: #dfdfdf, $from: 0%, $stop: #f8f8f8, $to: 100%) {
+	background: $start;
+	background: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+	background: -moz-linear-gradient(center top, $start $from, $stop $to);
+	background: -moz-gradient(center top, $start $from, $stop $to);
+	background: -webkit-linear-gradient(top, $start $from,$stop $to);
+	background: -o-linear-gradient(top, $start $from,$stop $to);
+	background: -ms-linear-gradient(top, $start $from,$stop $to);
+	background: linear-gradient(to bottom, $start $from,$stop $to);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$stop}',GradientType=0 );
+}
+
+@mixin css-diagonal-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background: -moz-linear-gradient(-45deg, $from 0%, $to 100%);
+	background: -webkit-linear-gradient(-45deg, $from 0%, $to 100%);
+	background: linear-gradient(135deg, $from 0%, $to 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$from, endColorstr=$to,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin rotate($string) {
+	-webkit-transform: rotate($string);
+	   -moz-transform: rotate($string);
+	    -ms-transform: rotate($string);
+	     -o-transform: rotate($string);
+	        transform: rotate($string);
+}
+
+@mixin scale($xfactor, $yfactor) {
+	-webkit-transform: scale($xfactor, $yfactor);
+	   -moz-transform: scale($xfactor, $yfactor);
+	    -ms-transform: scale($xfactor, $yfactor);
+	     -o-transform: scale($xfactor, $yfactor);
+	        transform: scale($xfactor, $yfactor);
+}
+
+@mixin skew($xfactor, $yfactor) {
+	-webkit-transform: skew($xfactor, $yfactor);
+	   -moz-transform: skew($xfactor, $yfactor);
+	    -ms-transform: skew($xfactor, $yfactor);
+	     -o-transform: skew($xfactor, $yfactor);
+	        transform: skew($xfactor, $yfactor);
+}
+
+@mixin translate($xvalue, $yvalue) {
+	-webkit-transform: translate($xvalue, $yvalue);
+	   -moz-transform: translate($xvalue, $yvalue);
+	    -ms-transform: translate($xvalue, $yvalue);
+	     -o-transform: translate($xvalue, $yvalue);
+	        transform: translate($xvalue, $yvalue);
+}
+
+@mixin transform-origin($hoffset, $voffset) {
+	-webkit-transform-origin: $hoffset $voffset; /* h-offset, v-offset */
+	   -moz-transform-origin: $hoffset $voffset;
+	    -ms-transform-origin: $hoffset $voffset;
+	     -o-transform-origin: $hoffset $voffset;
+	        transform-origin: $hoffset $voffset;
+}
+
+@mixin transform($string) {
+	-webkit-transform: $string;
+	   -moz-transform: $string;
+	    -ms-transform: $string;
+	     -o-transform: $string;
+	        transform: $string;
+}
+
+
+
+/***
+PLACEHOLDERS
+***/
+
+%clearfix {
+	&:before,
+	&:after {
+		content: "";
+    	display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	/* for IE */
+	zoom: 1; 
+}
+
+/***
+ANIMATIONS
+***/
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

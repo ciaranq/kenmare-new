@@ -1,0 +1,54 @@
+* # change the background color of the header
+# QUINLANS BLUE COLOR #174368
+GOLD is #CC9A66
+*/
+/* Changed size of logo
+*/
+
+.logo {
+    width: 324px;
+    height: 93px;
+    }
+
+/*menu txt color*/
+.header-nav > ul li a {
+  color: #ffffff;
+}
+ /* header background menu */
+.page-header {
+border-bottom: 3px solid #CC9A66;
+	background: #000;
+}
+
+/* SAME COLOR AS LOGO */
+.shop-button a.shop-button-link {
+  background: #CC9A66;
+  
+}
+/* footer text */
+.footer-panel a {
+    color: #;
+    text-decoration: none;
+}
+
+.footer-panel a:active, .footer-panel a:focus, .footer-panel a:hover {
+	color: #000
+		;align-content}
+
+.page-footer {
+    background: #000;
+    font-weight: 600;
+}
+
+/*
+
+# change the color of the shop button
+# change the color of the explore button
+# change the color of the discover button
+# change the back image in the header
+# change the logo in the header
+# change the bg color of the footer
+# remove all references to kenmare in the css
+# rename and remove the word kenmare from the files in themes/kenmare/assets/images
+# list where the files in themes/kenmare/assets/images are used.
+*/

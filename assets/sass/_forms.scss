@@ -1,0 +1,191 @@
+/*********************
+FORMS
+*********************/
+input,
+select,
+textarea {
+	font-family: $bodyfont;
+	background-color: transparent;
+	border: 1px solid #eee;
+	padding: 1em;
+	width: 100%;
+	max-width: 50em;
+	color: $navy;
+	font-weight: 300;
+	margin: 1.5em 0 0.5em;
+	border-radius: 6px;
+
+	&:-moz-placeholder,
+	&:-ms-input-placeholder,
+	&::-moz-placeholder,
+	&::-webkit-input-placeholder,
+	&::placeholder {
+		color: $navy;
+	}
+}
+
+
+input[type="radio"] {
+	width: auto;
+	margin: 0.1em 0 0;
+	border: 0;
+}
+
+input[type="checkbox"]{
+	width: auto;
+	margin: 0.3em 0 0;
+	border: 0;
+}
+
+select {}
+
+textarea {
+	height: 7em;
+}
+
+label {
+	display: block;
+	color: $navy;
+	font-size: 0.8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-left: .8em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+label.hidden-label {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.form-note {
+	clear: left;
+	font-size: 0.7em;
+	line-height: 1em;
+	display: block;
+	padding: 0 0.7em 1em;
+	font-style: italic;
+}
+
+.button,
+input[type="submit"],
+button[type="submit"] {
+	@extend %btn;
+
+
+}
+
+.error {
+	display: block;
+	color: #CA4636;
+}
+
+label.error {
+	width: auto;
+	float: none;
+	clear: left;
+	color: #CA4636;
+}
+
+.message {
+	display: block;
+	color: #2DCC70;
+}
+/***
+* CONTACT FORM 7 CLASSES
+***/
+
+.wpcf7 {
+	.ajax-loader {
+		display: block;
+		margin: 2em auto 0;
+	}
+}
+
+.wpcf7-form {
+	.wpcf7-list-item,
+	.wpcf7-list-item-label,
+	::placeholder {
+		color: $navy;
+		font-size: 0.8em;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+
+	input,
+	select,
+	textarea {
+		font-size: .9em;
+		padding: 1.1em;
+		max-width: none;
+		background-color: $white;
+		color: $navy;
+		text-transform: uppercase;
+		&::placeholder {
+			color: $navy;
+		}
+	}
+
+	.wpcf7-submit {
+		clear: both;
+		width: 200px;
+		background: $gold !important;
+		color: #fff;
+		margin: 1em 1%;
+	}
+
+	br {
+		display: none;
+	}
+}
+
+.form-cols {
+	display: flex;
+	justify-content: space-between;
+
+	.wpcf7-form-control-wrap {
+		input,
+		select {
+			width: 48%;
+			float: left;
+			max-width: 48%;
+			margin: 1em 1%;
+			height: 40px;
+			border: 1px solid $kgreen;
+			border-radius: 0;
+		}
+
+		textarea {
+			width: 98%;
+			margin: 1em 1%;
+			border: 1px solid $kgreen;
+			border-radius: 0;
+		}
+	}
+
+	.fullwidth {
+		width: 100%;
+
+		.wpcf7-list-item {
+			input {
+				width: 20px;
+				height: 20px;
+				float: left;
+				margin: 5px 0 0;
+				padding-top: 10px;
+				margin-right: 10px;
+
+			}
+		}
+	}
+}
+
+.wpcf7 {
+	width:100%;
+}

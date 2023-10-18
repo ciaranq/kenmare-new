@@ -1,0 +1,61 @@
+.page-header {
+	@extend %layout-padding;
+
+	position:relative;
+	top:0;
+	width:100%;
+	z-index:100;
+	display:flex;
+	justify-content:space-between;
+	// background:$white;
+	border-bottom:3px solid $aqua;
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: -20px;
+		left: 0;
+		background-image: url("../images/kenmare-top-nav-bg-banner.png");
+		background-repeat: no-repeat;
+
+		background-position: top center;
+		// overflow-x: hidden;
+
+		@include breakpoint(lt-break-small) {
+
+
+		}
+	}
+
+}
+
+/***
+LOGO
+***/
+
+.logo {
+	flex-shrink:0;
+	max-width:20%;
+	position:relative;
+	z-index:102;
+	width:124px;
+	height:93px;
+	display:block;
+	margin-top:0.8em;
+	margin-bottom:.6em;
+	background-image:url('../images/logo-common.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center;
+	text-indent:-9999px;
+
+	@include breakpoint(lt-break-big) {
+		max-width:none;
+	}
+
+	&:hover, &:focus, &:active {
+		opacity:.8;
+	}
+}
